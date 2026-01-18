@@ -1,0 +1,1389 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    width: 100%;
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+}
+
+footer p {
+    color: white;
+    font-size: small;
+}
+
+body.register-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("/WebPage_Project/images/prova.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.main-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-transparent {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 8%;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-transparent .menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar-transparent a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Times New Roman";
+}
+
+.navbar-transparent a:hover {
+    text-decoration: underline;
+}
+
+.navbar-transparent .logo {
+    position: absolute;
+    left: 40px;
+    top: 0px;
+    width: 120px;
+    height: auto;
+}
+
+.navbar-transparent .logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+.btn-book {
+    background-color: darkslategray;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: aliceblue;
+}
+
+.btn-book:hover {
+    background-color: #0a1d28;
+    text-decoration: none;
+}
+
+.hero-section {
+    flex: 1;
+    /* Kjo e detyron content-in të zërë të gjithë vendin bosh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Qendërzo vertikalisht */
+    align-items: center;
+    /* Qendërzo horizontalisht */
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    color: whitesmoke;
+    padding: 40px 0;
+    text-shadow: #05251f 3px 3px 5px;
+}
+
+.hero-content h1 {
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 2px;
+    color: aliceblue;
+    font-size: clamp(40px, 8vw, 80px);
+    /* Madhësi që përshtatet me ekranin */
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    margin-top: -18px;
+    letter-spacing: 1px;
+    color: aliceblue;
+}
+
+.login-container {
+    flex: 1;
+    width: 320px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+.login-container span {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: red;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-container a {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: blue;
+    text-align: center;
+}
+
+.login-container button:hover {
+    background-color: #0a1d28;
+}
+
+.reg-container {
+    width: 320px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.reg-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.reg-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.reg-container a {
+    font-family: 'Times New Roman', serif;
+    color: #007bff;
+}
+
+.reg-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+.reg-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.reg-container button:hover {
+    background-color: #0a1d28;
+}
+
+.forgot-container {
+    width: 320px;
+    margin: 70px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.forgot-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.forgot-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.forgot-container p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.forgot-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.forgot-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.forgot-container button:hover {
+    background-color: #555;
+}
+
+
+.login-container,
+.reg-container,
+.forgot-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* E bardhë transparente */
+    backdrop-filter: blur(10px);
+    /* Efekti i mjegullimit */
+    color: white;
+    /* Teksti duhet të jetë i bardhë që të lexohet */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Mbaj pjesën tjetër të width, margin etj. siç i ke */
+}
+
+.login-container label,
+.reg-container label,
+.forgot-container label {
+    color: white;
+}
+
+
+
+.fields-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 8%;
+}
+
+.field-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.field-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.field-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.field-info {
+    padding: 15px;
+    color: white;
+}
+
+.field-link {
+    text-decoration: none;
+}
+
+.fields-page {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("/WebPage_Project/images/background2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Kjo e bën sfondin të mos lëvizë kur bën scroll */
+    min-height: 100vh;
+}
+
+
+/* Kontenieri kryesor */
+.details-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+}
+
+/* Karta kryesore me efekt transparenca (Glassmorphism) */
+.details-card {
+    width: 100%;
+    max-width: 450px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.details-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* Stilimi i Label-ave që mbështjellin input-et */
+#bookingForm label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+/* Stilimi i Input-eve dhe Select-eve */
+#bookingForm input[type="date"],
+#bookingForm input[type="time"],
+#bookingForm select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    /* Fond i bardhë për lexim më të mirë */
+    color: #333;
+    font-size: 15px;
+    display: block;
+    outline: none;
+}
+
+/* Rregullimi i Grupit Radio */
+.radio-group {
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.radio-group p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Rreshtimi i radiove Indoor/Outdoor */
+.radio-group label {
+    display: inline-flex !important;
+    /* I detyron të rrinë në një rresht */
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 0 !important;
+    /* Heq margin-bottom e label-ave të tjerë */
+    cursor: pointer;
+    font-weight: normal !important;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    accent-color: #28a745;
+    /* Ngjyra e rrethit kur zgjidhet */
+}
+
+/* Butoni Rezervo */
+.btn-book {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-book:hover:not(:disabled) {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-book:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: -5px 20px;
+}
+
+.profile-card {
+    width: 320px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* E bardhë transparente */
+    backdrop-filter: blur(10px);
+    /* Efekti i mjegullimit */
+    color: white;
+    /* Teksti duhet të jetë i bardhë që të lexohet */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.profile-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+
+.profile-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.profile-container button:last-child {
+    margin-bottom: 0;
+}
+
+.profile-container button:hover {
+    background-color: #0a1d28;
+}
+
+.avatar-upload {
+    position: relative;
+    max-width: 150px;
+    margin: 0 auto 30px;
+}
+
+.avatar-preview img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f0f0f0;
+}
+
+.avatar-edit label {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: darkslategray;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.avatar-edit label:hover {
+    background-color: #0a1d28;
+}
+
+#imageUpload {
+    display: none;
+}
+
+.verify-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+}
+
+.verify-card {
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* E bardhë transparente */
+    backdrop-filter: blur(10px);
+    /* Efekti i mjegullimit */
+    color: white;
+    /* Teksti duhet të jetë i bardhë që të lexohet */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.code-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+.code-digit {
+    width: 45px;
+    height: 55px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.code-digit:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn-verify {
+    width: 100%;
+    padding: 10px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-verify:hover {
+    background-color: #0a1d28;
+}
+
+.resend-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.resend-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+.border-danger {
+    border: 2px solid #ff4d4d !important;
+    background-color: rgba(255, 77, 77, 0.1);
+}
+
+
+.text-danger {
+    color: #ff4d4d;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
+}
+
+
+/* ===== ADMIN DASHBOARD ===== */
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.admin-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    width: 350px;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 50px;
+}
+
+.admin-card h2 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #f8f4f4;
+}
+
+.admin-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-card li {
+    margin-bottom: 15px;
+}
+
+.admin-card a {
+    display: block;
+    padding: 12px;
+    background: #1ab394;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.admin-card a:hover {
+    background: #18a689;
+}
+
+.admin-card label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.admin-card input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+.admin-card .save-btn {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.cancel-link {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: whitesmoke !important;
+    /* Override admin-card a styles if needed or separate */
+    background: none !important;
+    /* Ensure it doesn't look like a button if generic a styles apply */
+    padding: 5px !important;
+}
+
+.cancel-link:hover {
+    text-decoration: underline;
+    background: none !important;
+    color: #ccc !important;
+}
+
+/* ===== USERS TABLE ===== */
+.users-wrapper {
+    padding: 40px;
+}
+
+.users-wrapper h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: whitesmoke;
+    font-family: 'Times New Roman', serif;
+}
+
+.users-table {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.users-table th {
+    background: rgba(150, 148, 148, 0.35);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 14px;
+    text-align: center;
+    text-decoration-color: whitesmoke;
+    table-layout: fixed;
+}
+
+.users-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+    color: white;
+    text-align: center;
+}
+
+.users-table th:nth-child(6),
+.users-table td:nth-child(6) {
+    width: 120px;
+}
+
+
+
+/* ===== STATUS ===== */
+.status-active {
+    color: #1ab394;
+    font-weight: 600;
+}
+
+.status-blocked {
+    color: #ed5565;
+    font-weight: 600;
+}
+
+/* ===== BUTTONS ===== */
+.action-form {
+    display: inline-block;
+}
+
+.btn {
+    border: none;
+    padding: 7px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-role {
+    background: #1c84c6;
+    color: white;
+}
+
+.btn-role:hover {
+    background: #166fa3;
+}
+
+.btn-delete {
+    background: #555;
+    color: white;
+    margin-left: 5px;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+
+/* ===== MY BOOKINGS PAGE ===== */
+.my-bookings {
+    flex: 1;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.my-bookings h2 {
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.my-bookings p {
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 1px;
+    color: aliceblue;
+    font-size: 18px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.bookings-table th {
+    background: rgba(100, 100, 100, 0.4);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 16px 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bookings-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+.bookings-table tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+}
+
+.bookings-table tr:last-child td {
+    border-bottom: none;
+}
+
+.status-paid {
+    background: rgba(40, 167, 69, 0.2);
+    color: #4ade80;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    display: inline-block;
+}
+
+.status-cancelled {
+    background: rgba(220, 53, 69, 0.2);
+    color: #f87171;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgba(248, 113, 113, 0.3);
+    display: inline-block;
+}
+
+.status-past {
+    background: rgba(156, 163, 175, 0.2);
+    color: #d1d5db;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    display: inline-block;
+}
+
+.status-pending {
+    background: rgba(255, 193, 7, 0.2);
+    color: #fbbf24;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    display: inline-block;
+}
+
+/* ===== ADMIN BOOKINGS PAGE ===== */
+.bookings-wrapper {
+    padding: 40px;
+    min-height: 80vh;
+}
+
+.bookings-wrapper h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: whitesmoke;
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.admin-bookings-table {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.admin-bookings-table th {
+    background: rgba(150, 148, 148, 0.35);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-bookings-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+.admin-bookings-table tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.3s ease;
+}
+
+.admin-bookings-table tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-action {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 3px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-confirm {
+    background: rgba(40, 167, 69, 0.3);
+    color: #4ade80;
+    border-color: rgba(74, 222, 128, 0.3);
+}
+
+.btn-confirm:hover {
+    background: rgba(40, 167, 69, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-cancel {
+    background: rgba(255, 193, 7, 0.3);
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.btn-cancel:hover {
+    background: rgba(255, 193, 7, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.btn-delete-action {
+    background: rgba(220, 53, 69, 0.3);
+    color: #f87171;
+    border-color: rgba(248, 113, 113, 0.3);
+}
+
+.btn-delete-action:hover {
+    background: rgba(220, 53, 69, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.payment-status {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== BOOKING SUCCESS PAGE ===== */
+.success-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 20px;
+}
+
+.success-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    padding: 60px 40px;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon {
+    width: 90px;
+    height: 90px;
+    background: rgba(16, 185, 129, 0.15);
+    border: 2px solid #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 35px;
+    font-size: 55px;
+    color: #10b981;
+    animation: successPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes successPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    }
+}
+
+.success-card h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: whitesmoke;
+}
+
+.success-card p {
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 35px;
+}
+
+.success-card p strong {
+    color: #fbbf24;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btn-success {
+    padding: 14px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Times New Roman', serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+.btn-primary {
+    background: rgba(0, 123, 255, 0.3);
+    color: #60a5fa;
+    border-color: rgba(96, 165, 250, 0.3);
+}
+
+.btn-primary:hover {
+    background: rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(108, 117, 125, 0.3);
+    color: #d1d5db;
+    border-color: rgba(209, 213, 219, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(108, 117, 125, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(108, 117, 125, 0.4);
+}
+
+/* ===== PAYMENT METHOD BADGES ===== */
+.payment-method-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid transparent;
+}
+
+.payment-method-badge.on-field {
+    background: rgba(255, 193, 7, 0.2);
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.payment-method-badge.stripe {
+    background: rgba(0, 123, 255, 0.2);
+    color: #60a5fa;
+    border-color: rgba(96, 165, 250, 0.3);
+}
+
+.status-cancelled {
+    background: rgba(220, 53, 69, 0.2);
+    color: #f87171;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgba(248, 113, 113, 0.3);
+    display: inline-block;
+}
+
+.status-past {
+    background: rgba(108, 117, 125, 0.2);
+    color: #d1d5db;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    display: inline-block;
+}
+
+/* ===== PAYMENT PAGE STYLES ===== */
+.payment-wrapper {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.payment-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    color: white;
+}
+
+.payment-card h2,
+.payment-card h3 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.reservation-summary {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.summary-item span {
+    color: #9ca3af;
+}
+
+.summary-item strong {
+    color: #f3f4f6;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.summary-total span {
+    color: white;
+}
+
+.summary-total strong {
+    color: #10b981;
+}
+
+#payment-element {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#payment-message {
+    color: #ef4444;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 8px;
+}
+
+/* Spinner CSS */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-left-color: #10b981;
+    animation: spin 1s ease infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
